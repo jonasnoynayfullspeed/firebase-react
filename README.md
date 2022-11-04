@@ -33,3 +33,9 @@ npm install
 ```
 npm start
 ```
+
+### Go to your browser and go to this link
+
+```
+http://localhost:7777/
+```

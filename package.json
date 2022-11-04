@@ -1,7 +1,7 @@
 {
   "name": "firebase-react",
   "version": "1.0.0",
-  "description": "A boilerplate for ReactJS and Webpack4",
+  "description": "Firebae React Demo",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --host localhost --port 7777",
