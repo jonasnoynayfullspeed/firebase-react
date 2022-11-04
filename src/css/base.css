@@ -70,7 +70,7 @@ border-radius: 20px;
 	display: flex;
 	align-content: flex-start;
 	justify-content: center;
-	padding: 5rem 20rem;
+	padding: 5rem 10rem;
 	animation: fadeChatApp 0.6s ease-in-out;
 	animation-fill-mode: forwards;
 }
@@ -424,6 +424,10 @@ border-radius: 20px;
     margin: 0;
     color: #909090;
     font-size: 12px;
+}
+
+.userList .chatApp__convTimeline {
+    flex-direction: column !important;
 }
 
 @media screen and (max-width:768px) {

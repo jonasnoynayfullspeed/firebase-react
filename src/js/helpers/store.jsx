@@ -10,7 +10,7 @@ const loggerMiddleware = createLogger();
 export const store = createStore (
     rootReducer,
     compose(
-        applyMiddleware(thunk.withExtraArgument({getFirestore}), loggerMiddleware),
+        applyMiddleware(thunk.withExtraArgument({getFirestore})),
         reduxFirestore(firebase)
     )
 );

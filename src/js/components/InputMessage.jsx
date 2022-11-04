@@ -8,25 +8,20 @@ class InputMessage extends React.Component {
 	}
 	handleSendMessage(event) {
 		event.preventDefault();
-		/* Disable sendMessage if the message is empty */
 		if( this.messageInput.value.length > 0 ) {
 			this.props.sendMessageLoading(this.ownerInput.value, this.ownerIdInput.value, this.ownerAvatarInput.value, this.messageInput.value);
-			/* Reset input after send*/
 			this.messageInput.value = '';
 		}
 	}
 	handleTyping(event) {
-		/* Tell users when another user has at least started to write */
 		if( this.messageInput.value.length > 0 ) {
 			this.props.typing(this.ownerInput.value);
 		}
 		else {
-			/* When there is no more character, the user no longer writes */
 			this.props.resetTyping(this.ownerInput.value);
 		}
 	}
 	render() {
-		/* If the chatbox state is loading, loading class for display */
 		var loadingClass = this.props.isLoading ? 'chatApp__convButton--loading' : '';
 		let sendButtonIcon = <i className={"material-icons"}>send</i>;
 		return (

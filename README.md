@@ -2,10 +2,10 @@
 
 ## Firebase Firestore Webpack + ReactJS
 
-### Prerequsite
+### Prerequsite install
 
 ```
-npm
+brew install node@14
 ```
 
 ### create an .env file with the following credentials

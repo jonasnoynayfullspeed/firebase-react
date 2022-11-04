@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ChatBox from './ChatBox';
 import { connect } from 'react-redux';
 import { messageActions } from '../actions/message.actions';
+import UserList from './UserList';
 
 function detectURL(message) {
 	var urlRegex = /(((https?:\/\/)|(www\.))[^\s]+)/g;
@@ -13,40 +14,6 @@ function detectURL(message) {
 class ChatRoom extends Component {
 	constructor(props, context) {
 		super(props, context);
-		this.state = {
-			messages: [{
-				id: 1,
-				sender: 'jonas',
-				senderAvatar: 'https://i.pravatar.cc/150?img=32',
-				message: 'Hello 👋'
-			},
-			{
-				id: 2,
-				sender: 'jonas',
-				senderAvatar: 'https://i.pravatar.cc/150?img=56',
-				message: 'Hey!'
-			},
-			{
-				id: 3,
-				sender: 'admin',
-				senderAvatar: 'https://i.pravatar.cc/150?img=56',
-				message: 'How are you?'
-			},
-			{
-				id: 4,
-				sender: 'admin',
-				senderAvatar: 'https://i.pravatar.cc/150?img=32',
-				message: 'Great! It\'s been a while... 🙃'
-			},
-			{
-				id: 5,
-				sender: 'jonas',
-				senderAvatar: 'https://i.pravatar.cc/150?img=56',
-				message: 'Indeed.... We\'re gonna have to fix that. 🌮🍻'
-			}
-			],
-			isTyping: [],
-		};
 		this.sendMessage = this.sendMessage.bind(this);
 		this.typing = this.typing.bind(this);
 		this.resetTyping = this.resetTyping.bind(this);
@@ -115,6 +82,7 @@ class ChatRoom extends Component {
 		return (
 			<div className={"chatApp__room"}>
 				{chatBoxes}
+                <UserList />
 			</div>
 		);
 	}
