@@ -26,6 +26,7 @@ class UserList extends Component {
                         tabIndex="0"
                     />
                     <div className={'chatApp__convButton '} onClick={this.handleSubmit}>
+                        <i>⇨</i>
                     </div>
                 </form>
             </div>

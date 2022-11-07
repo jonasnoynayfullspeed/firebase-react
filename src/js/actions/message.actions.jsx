@@ -51,8 +51,6 @@ const listenTyping  = () => {
         
         firestore.collection('typing').onSnapshot(snap => {
             let typing = null;
-
-            console.log(snap);
     
             snap.docs.map((doc) => {
                 if(doc.exists) {

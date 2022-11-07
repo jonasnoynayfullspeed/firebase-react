@@ -267,10 +267,11 @@ border-radius: 20px;
 }
 .chatApp__convButton i {
 	position: relative;
-	top: 50%;
+	top: 35%;
 	transform: translateY(-50%);
 	padding: 0 0 0 1px;
 	font-size: 22px;
+    line-height: 0;
 }
 .chatApp__convButton--loading {
 	cursor: wait;

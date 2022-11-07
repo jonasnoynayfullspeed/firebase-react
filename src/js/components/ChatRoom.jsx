@@ -82,7 +82,6 @@ class ChatRoom extends Component {
 		return (
 			<div className={"chatApp__room"}>
 				{chatBoxes}
-                <UserList />
 			</div>
 		);
 	}

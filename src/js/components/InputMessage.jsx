@@ -23,7 +23,7 @@ class InputMessage extends React.Component {
 	}
 	render() {
 		var loadingClass = this.props.isLoading ? 'chatApp__convButton--loading' : '';
-		let sendButtonIcon = <i className={"material-icons"}>send</i>;
+		let sendButtonIcon = <i className={"material-icons"}>⇨</i>;
 		return (
 			<form onSubmit={this.handleSendMessage}>
 				<input
@@ -45,7 +45,7 @@ class InputMessage extends React.Component {
 					type="text"
 					ref={message => (this.messageInput = message)}
 					className={"chatApp__convInput"}
-					placeholder="Text message"
+					placeholder="Send message"
 					onKeyDown={this.handleTyping}
 					onKeyUp={this.handleTyping}
 					tabIndex="0"
